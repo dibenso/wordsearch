@@ -1,0 +1,25 @@
+{
+  "name": "wordsearch",
+  "version": "1.0.0",
+  "description": "Wordsearch",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wordsearch"
+  ],
+  "author": "Dillon Benson",
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.1.4",
+    "express": "^4.15.3",
+    "next": "^3.0.0-beta10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "styled-components": "^2.0.0"
+  }
+}
