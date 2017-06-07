@@ -20,7 +20,9 @@
     "helmet": "^3.6.1",
     "next": "^3.0.0-beta10",
     "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
+    "react-fastclick": "^3.0.2-alpha.1",
     "styled-components": "^2.0.0"
   }
 }

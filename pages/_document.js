@@ -1,6 +1,14 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import styled, { ServerStyleSheet } from 'styled-components'
+import initReactFastclick from 'react-fastclick'
+import Navbar from '../components/navbar'
 import { APP_NAME } from '../constants'
+
+const MainContent = styled.div`
+  margin-top: 50px;
+`
+
+initReactFastclick();
 
 export default class MyDocument extends Document {
   render () {
@@ -12,13 +20,21 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>{titleForPage()}</title>
+          <meta charSet='utf-8' />
+          <meta name='viewport' content='initial-scale=1.0, width=device-width' />
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" />
+          <link rel="stylesheet" href="/static/css/navbar.css" />
           {styleTags}
         </Head>
         <body>
-          <div className='root'>
+          <header>
+            <Navbar />
+          </header>
+          <MainContent className='root container'>
             {main}
-          </div>
+          </MainContent>
           <NextScript />
         </body>
       </html>
