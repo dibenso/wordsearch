@@ -7,12 +7,11 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet()
     const main = sheet.collectStyles(<Main />)
     const styleTags = sheet.getStyleElement()
-    const { title } = this.props
     
     return (
       <html>
         <Head>
-          <title>{APP_NAME}</title>
+          <title>{titleForPage()}</title>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
           {styleTags}
         </Head>
@@ -25,4 +24,18 @@ export default class MyDocument extends Document {
       </html>
     )
   }
+}
+
+function titleForPage() {
+  if(typeof window !== 'undefined') {
+    switch(window.location.pathname) {
+      case '/':
+        return APP_NAME
+
+      default:
+        return APP_NAME
+    }
+  }
+
+  return APP_NAME
 }
