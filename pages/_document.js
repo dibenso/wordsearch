@@ -1,12 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import styled, { ServerStyleSheet } from 'styled-components'
+import { ServerStyleSheet } from 'styled-components'
 import initReactFastclick from 'react-fastclick'
 import Navbar from '../components/navbar'
 import { APP_NAME } from '../constants'
-
-const MainContent = styled.div`
-  margin-top: 50px;
-`
 
 initReactFastclick();
 
@@ -32,9 +28,9 @@ export default class MyDocument extends Document {
           <header>
             <Navbar />
           </header>
-          <MainContent className='root container'>
+          <div className='root container'>
             {main}
-          </MainContent>
+          </div>
           <NextScript />
         </body>
       </html>
