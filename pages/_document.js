@@ -1,7 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import initReactFastclick from 'react-fastclick'
-import Navbar from '../components/navbar'
 import { APP_NAME } from '../constants'
 
 initReactFastclick();
@@ -25,9 +24,6 @@ export default class MyDocument extends Document {
           {styleTags}
         </Head>
         <body>
-          <header>
-            <Navbar />
-          </header>
           <div className='root container'>
             {main}
           </div>
