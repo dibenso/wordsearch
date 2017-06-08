@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Layout from '../components/layout'
+import Wordsearch from '../components/wordsearch'
 
 const Title = styled.h1`
   color: red;
@@ -9,5 +10,6 @@ const Title = styled.h1`
 export default () => (
   <Layout>
     <Title>My page</Title>
+    <Wordsearch />
   </Layout>
 )
