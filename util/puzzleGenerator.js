@@ -1,4 +1,22 @@
-export default function () {
+export default (function () {
+
+  'use strict';
+
+  /**
+  * Generates a new word find (word search) puzzle provided a set of words.
+  * Can automatically determine the smallest puzzle size in which all words
+  * fit, or the puzzle size can be manually configured.  Will automatically
+  * increase puzzle size until a valid puzzle is found.
+  *
+  * WordFind has no dependencies.
+  */
+
+  /**
+  * Initializes the WordFind object.
+  *
+  * @api private
+  */
+  var WordFind = function () {
 
     // Letters used to fill blank spots in the puzzle
     var letters = 'abcdefghijklmnoprstuvwy';
@@ -426,4 +444,5 @@ export default function () {
   */
   var root = typeof exports !== "undefined" && exports !== null ? exports : window;
   root.wordfind = WordFind();
-})
+
+}).call(this);
